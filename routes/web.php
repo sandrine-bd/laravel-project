@@ -3,5 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'Hello World From Laravel v12.x (PHP v8.x.x)';
+    return 'Homepage';
+});
+
+Route::get('/product', function () {
+    return 'Liste des produits';
+});
+
+Route::get('/product/{id}', function ($id) {
+    return 'Fiche du produit {id}';
+});
+
+Route::get('/cart', function () {
+    return 'Panier';
 });
