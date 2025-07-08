@@ -4,6 +4,6 @@
 
 @section('content')
 <div>
-    <h1>Vendre le jeu {{ $id }}</h1>
+    <h1>Vendre mon jeu</h1>
 </div>
 @endsection

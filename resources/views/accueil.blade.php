@@ -4,7 +4,7 @@
 
 @section('content')
     <div>
-        <img src="/public/assets/replay%20logo.jpg" alt="replay-seconde-main-du-jeu">
+        <img src="{{asset("assets/replay-logo.png")}}" alt="replay-seconde-main-du-jeu">
         <h3>
             Achetez et revendez vos jeux de société en toute simplicité : petits prix pour les passionnés, zéro tracas pour les vendeurs.
         </h3>

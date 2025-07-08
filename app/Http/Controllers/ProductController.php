@@ -10,7 +10,7 @@ class ProductController extends Controller
         return view('acheter');
     }
 
-    public function showProduct($id): string {
-        return view('vendre', ['id' => $id]);
+    public function showProduct: string {
+        return view('vendre');
     }
 }

@@ -13,7 +13,7 @@
             <a href="acheter">Acheter</a>
             <a href="vendre">Vendre</a>
             <a href="panier">Panier</a>
-            <a>Mon compte</a>
+            <a href="mon-compte">Mon compte</a>
     </div>
     <div class="container">
         @yield('content')
