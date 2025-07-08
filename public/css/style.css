@@ -193,3 +193,26 @@ h2 {
     margin-left: 40px;
     line-height: 2;
 }
+
+.vendre {
+    background-color: #9C282A;
+    border: none;
+    color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 21px;
+    margin-bottom: 50px;
+}
+
+.etat {
+    background-color: #9C282A;
+    color: #fafafa;
+    padding: 20px;
+    margin: 10px;
+}
+
+.qualite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

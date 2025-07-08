@@ -16,9 +16,9 @@
     <div class="filtres">
         <form class="filtre">
             <p><b>Etat :</b></p>
-            <input type="checkbox" name="etat" value="neuf">Etat neuf
-            <input type="checkbox" name="etat" value="tres-bon">Très bon état
-            <input type="checkbox" name="etat" value="bon">Bon état
+            <input type="checkbox" name="etat" value="neuf">Très bon neuf
+            <input type="checkbox" name="etat" value="tres-bon">Bon état
+            <input type="checkbox" name="etat" value="bon">Correct
         </form>
 
         <form class="filtre">
@@ -50,73 +50,73 @@
         <div class="jeu-vente">
             <img src="{{asset("assets/cracklist2.png")}}" alt="cracklist" class="image-jeu">
             <h3>CrackList</h3>
-            <p>Bon état - 26 €</p>
+            <p>Correct - 26 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/skyjo2.png")}}" alt="skyjo" class="image-jeu">
             <h3>Skyjo</h3>
-            <p>Très bon état - 45 €</p>
+            <p>Bon état - 45 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/code-names2.png")}}" alt="code-names" class="image-jeu">
             <h3>Code Names</h3>
-            <p>Etat neuf - 50 €</p>
+            <p>Très bon état - 50 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/wazabi2.png")}}" alt="wazabi" class="image-jeu">
             <h3>Wazabi</h3>
-            <p>Bon état - 14 €</p>
+            <p>Correct - 14 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/hues.png")}}" alt="hues" class="image-jeu">
             <h3>Hues and Cues</h3>
-            <p>Très bon état - 32 €</p>
+            <p>Bon état - 32 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/imposteur1.png")}}" alt="imposteur" class="image-jeu">
             <h3>L'imposteur</h3>
-            <p>Bon état - 40 €</p>
+            <p>Correct - 40 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/lol.png")}}" alt="lol" class="image-jeu">
             <h3>Lol : qui rit, sort</h3>
-            <p>Très bon état - 28 €</p>
+            <p>Bon état - 28 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/mamie-moule.png")}}" alt="mamie-moule" class="image-jeu">
             <h3>Mamie Moule Maki</h3>
-            <p>Bon état - 12 €</p>
+            <p>Correct - 12 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/mytho.png")}}" alt="mytho" class="image-jeu">
             <h3>Mytho Pas Mytho</h3>
-            <p>Etat neuf - 35 €</p>
+            <p>Très bon état - 35 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/skip.png")}}" alt="skip" class="image-jeu">
             <h3>Skip-Bo</h3>
-            <p>Très bon état - 17 €</p>
+            <p>Bon état - 17 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/uno.png")}}" alt="uno" class="image-jeu">
             <h3>Uno Show Em No Mercy</h3>
-            <p>Bon état - 26 €</p>
+            <p>Correct - 26 €</p>
         </div>
 
         <div class="jeu-vente">
             <img src="{{asset("assets/imposteur2.png")}}" alt="imposteur 2" class="image-jeu">
             <h3>L'imposteur</h3>
-            <p>Très bon état - 18 €</p>
+            <p>Bon état - 18 €</p>
         </div>
     </div>
 
