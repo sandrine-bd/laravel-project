@@ -16,6 +16,10 @@ body {
     padding-left: 0.5vw;
 }
 
+.navbar-menu a {
+    margin: 20px;
+}
+
 .navbar-picto {
     margin-left: 10px;
 }
@@ -127,4 +131,65 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.barre-recherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-recherche {
+    padding-left: 40px;
+    padding-right: 10px;
+    height: 40px;
+    border: 1px solid #CE3437;
+    border-radius: 20px;
+    background: none;
+    font-size: 21px;
+    width: 600px;
+}
+
+.icone-recherche {
+    margin-right: 20px;
+    color: #9C282A;
+    width: 40px;
+}
+
+.rechercher {
+    background-color: #9C282A;
+    border: none;
+    color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 21px;
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filtre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 17px;
+    margin-left: 40px;
+}
+
+.filtre input {
+    margin: 10px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-left: 40px;
+}
+
+.deroulement {
+    font-size: 17px;
+    margin-left: 40px;
+    line-height: 2;
 }
