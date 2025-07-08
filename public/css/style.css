@@ -1,0 +1,130 @@
+body {
+    background-color: #fafafa;
+    color: #400F10;
+    font-family: 'Roboto';
+}
+
+.navbar {
+    background-color: #9C282A;
+    color: #fafafa;
+    font-size: 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1vw;
+    padding-left: 0.5vw;
+}
+
+.navbar-picto {
+    margin-left: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+.navbar .active {
+    font-weight: bold;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.navbar-picto {
+    width: 40px;
+}
+
+h1 {
+    font-family: 'Audiowide';
+}
+
+h3 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.image-replay {
+    display: block;
+    width: 100%;
+}
+
+.sous-titre {
+    background-color: #9C282A;
+    color: #fafafa;
+    padding: 40px;
+}
+
+.titre {
+    margin: 40px;
+    margin-bottom: 0;
+    font-size: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.quatre-jeux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.image-jeu {
+    width: 400px;
+    margin: 10px;
+}
+
+.bouton a {
+    background-color: #9C282A;
+    font-size: 32px;
+    text-decoration: none;
+    color: #fafafa;
+    padding: 20px 40px;
+    border-radius: 40px;
+}
+
+.bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+
+.image-accueil {
+    width: 300px;
+    margin: 20px;
+}
+
+.accueil-avis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDF3F3;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.footer {
+    background-color: #9C282A;
+    color: #fafafa;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.jeu-vente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -3,7 +3,7 @@
 @section('title', 'Panier')
 
 @section('content')
-    <div>
-        <h1>Panier</h1>
+    <div class="titre">
+        <h1>MON PANIER</h1>
     </div>
 @endsection
