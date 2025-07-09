@@ -25,7 +25,7 @@
     </div>
 
     <div class="bouton">
-        <a href="acheter">Voir tous les jeux</a>
+        <a href="products">Voir tous les jeux</a>
     </div>
 
     <div class="accueil-avis">
@@ -43,7 +43,7 @@
     </div>
 
     <div class="bouton">
-        <a href="acheter">Voir tous les jeux</a>
+        <a href="products">Voir tous les jeux</a>
     </div>
 
 @endsection

@@ -14,19 +14,19 @@
 
     <div class="navbar">
         <div class="navbar-logo">
-            <a href="accueil">
+            <a href="home">
                 <img src="{{asset("assets/logo.png")}}" alt="logo replay" class="picto-navbar">
             </a>
         </div>
         <div class="navbar-menu">
-            <a href="acheter" class="{{ request()->is('acheter') ? 'active' : '' }}">Acheter</a>
-            <a href="vendre" class="{{ request()->is('vendre') ? 'active' : '' }}">Vendre</a>
+            <a href="products" class="{{ request()->is('acheter') ? 'active' : '' }}">Acheter</a>
+            <a href="selling" class="{{ request()->is('vendre') ? 'active' : '' }}">Vendre</a>
         </div>
         <div class="navbar-panier-compte">
-            <a href="panier">
+            <a href="cart">
                 <img src="{{asset("assets/panier.svg")}}" alt="panier" class="navbar-picto" >
             </a>
-            <a href="mon-compte">
+            <a href="account">
                 <img src="{{asset("assets/compte.svg")}}" alt="mon-compte" class="navbar-picto">
             </a>
         </div>

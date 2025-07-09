@@ -2,14 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [\App\Http\Controllers\AccueilController::class, 'show']);
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'show']);
 
-Route::get('/accueil', [\App\Http\Controllers\AccueilController::class, 'show']);
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'show']);
 
-Route::get('/acheter', [\App\Http\Controllers\AchatController::class, 'show']);
+Route::get('/products', [\App\Http\Controllers\ProductController::class, 'show']);
 
-Route::get('/vendre', [\App\Http\Controllers\VenteController::class, 'show']);
+Route::get('/products/{id}', [\App\Http\Controllers\ProductController::class, 'showProduct']);
 
-Route::get('/panier', [\App\Http\Controllers\PanierController::class, 'show']);
+Route::get('/selling', [\App\Http\Controllers\SellingController::class, 'show']);
 
-Route::get('/mon-compte', [\App\Http\Controllers\CompteController::class, 'show']);
+Route::get('/cart', [\App\Http\Controllers\CartController::class, 'show']);
+
+Route::get('/account', [\App\Http\Controllers\AccountController::class, 'show']);

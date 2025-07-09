@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AccueilController extends Controller
+class HomeController extends Controller
 {
         public function show(): string {
-            return view('accueil');
+            return view('home');
         }
 }

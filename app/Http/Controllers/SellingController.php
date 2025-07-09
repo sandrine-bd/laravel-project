@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PanierController extends Controller
+class SellingController extends Controller
 {
     public function show(): string {
-        return view('panier');
+        return view('selling');
     }
 }
