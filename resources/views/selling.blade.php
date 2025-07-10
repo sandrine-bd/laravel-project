@@ -16,10 +16,7 @@
             2) Recevez une <b>estimation du prix</b> de vente<br>
             3) Imprimez le bon de livraison et <b>envoyez votre jeu gratuitement</b> !
         </p>
-    </div>
-
-    <div>
-        <button class="bouton vendre" type="submit">Vendre mon jeu</button>
+        <button class="bouton bouton-style" type="submit">Vendre mon jeu</button>
     </div>
 
     <div>

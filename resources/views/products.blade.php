@@ -10,7 +10,7 @@
     <form class="recherche-barre">
         <img src="{{ asset("assets/icone-recherche.svg") }}" alt="Rechercher" class="recherche-icone">
         <input type="text" name="recherche" placeholder="Recherche par nom..." class="recherche-input">
-        <button class="bouton rechercher" type="submit">Rechercher</button>
+        <button class="bouton bouton-style" type="submit">Rechercher</button>
     </form>
 
     <div class="filtres">
@@ -51,7 +51,7 @@
                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="jeu-image">
                 <h3>{{ $product->name }}</h3>
                 <p>{{ $product->state }} - {{ $product->price }} €</p>
-                <a class="bouton" href="{{ route('products.show', $product->id) }}">Voir les détails</a>
+                <a class="bouton bouton-style" href="{{ route('products.show', $product->id) }}">Voir les détails</a>
             </div>
         @endforeach
     </div>

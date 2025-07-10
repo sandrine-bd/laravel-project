@@ -13,7 +13,7 @@
         <div>
             <p class="deroulement"> Etat : {{ $product->state }} </p>
             <p class="deroulement"> Prix : {{ $product->price }} € </p>
-            <button type="submit" class="bouton rechercher">Ajouter au panier</button>
+            <button type="submit" class="bouton bouton-style">Ajouter au panier</button>
         </div>
     </div>
 
