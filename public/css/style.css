@@ -79,7 +79,7 @@ h3 {
     justify-content: center;
 }
 
-.quatre-jeux {
+.bloc-jeux {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -135,7 +135,7 @@ h3 {
     margin-top: 40px;
 }
 
-.jeu-vente {
+.jeu-liste {
     display: flex;
     flex-direction: column;
     justify-content: center;
