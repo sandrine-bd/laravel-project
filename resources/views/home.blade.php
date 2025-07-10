@@ -18,10 +18,10 @@
     </div>
 
     <div class="quatre-jeux">
-        <img src="{{asset("assets/cracklist.png")}}" alt="cracklist" class="image-jeu">
-        <img src="{{asset("assets/skyjo.png")}}" alt="skyjo" class="image-jeu">
-        <img src="{{asset("assets/code-names.png")}}" alt="code-names" class="image-jeu">
-        <img src="{{asset("assets/wazabi.png")}}" alt="wazabi" class="image-jeu">
+        <img src="{{asset("assets/cracklist.png")}}" alt="cracklist" class="jeu-image">
+        <img src="{{asset("assets/skyjo.png")}}" alt="skyjo" class="jeu-image">
+        <img src="{{asset("assets/code-names.png")}}" alt="code-names" class="jeu-image">
+        <img src="{{asset("assets/wazabi.png")}}" alt="wazabi" class="jeu-image">
     </div>
 
     <div class="bouton">
@@ -29,14 +29,14 @@
     </div>
 
     <div class="accueil-avis">
-        <img src="{{asset("assets/nuage.png")}}" alt="nuage" class="image-accueil">
+        <img src="{{asset("assets/nuage.png")}}" alt="nuage" class="accueil-image">
         <h3>
             99% des vendeurs qui utilisent notre service sont satisfaits
         </h3>
     </div>
 
     <div class="accueil-avis">
-        <img src="{{asset("assets/smiley-rouge.png")}}" alt="smiley-rouge" class="image-accueil">
+        <img src="{{asset("assets/smiley-rouge.png")}}" alt="smiley-rouge" class="accueil-image">
         <h3>
             98% de nos utilisateurs affirment avoir trouvé le jeu qu’ils cherchaient
         </h3>

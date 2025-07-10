@@ -79,7 +79,7 @@ h3 {
     justify-content: center;
 }
 
-.bloc-jeux {
+.jeux-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -88,7 +88,7 @@ h3 {
     flex-wrap: wrap;
 }
 
-.image-jeu {
+.jeu-image {
     width: 400px;
     margin: 10px;
 }
@@ -109,7 +109,7 @@ h3 {
     margin: 20px;
 }
 
-.image-accueil {
+.accueil-image {
     width: 300px;
     margin: 20px;
 }
@@ -142,14 +142,14 @@ h3 {
     align-items: center;
 }
 
-.barre-recherche {
+.recherche-barre {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.input-recherche {
+.recherche-input {
     padding-left: 40px;
     padding-right: 10px;
     height: 40px;
@@ -160,7 +160,7 @@ h3 {
     width: 600px;
 }
 
-.icone-recherche {
+.recherche-icone {
     margin-right: 20px;
     color: #9C282A;
     width: 40px;
@@ -224,4 +224,10 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.jeu-details {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
 }

@@ -13,6 +13,8 @@ class ProductController extends Controller
     }
 
     public function showProduct($id): string {
-        return view('product-details', ['id' => $id]);
+        $product = DB::select('SELECT * FROM products WHERE id = :id', ['id' => $id]);
+        $product = $product[0];
+        return view('product-details', compact('product'));
     }
 }

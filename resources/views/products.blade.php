@@ -7,9 +7,9 @@
         <h1>JEUX EN VENTE</h1>
     </div>
 
-    <form class="barre-recherche">
-        <img src="{{ asset("assets/icone-recherche.svg") }}" alt="Rechercher" class="icone-recherche">
-        <input type="text" name="recherche" placeholder="Recherche par nom..." class="input-recherche">
+    <form class="recherche-barre">
+        <img src="{{ asset("assets/icone-recherche.svg") }}" alt="Rechercher" class="recherche-icone">
+        <input type="text" name="recherche" placeholder="Recherche par nom..." class="recherche-input">
         <button class="bouton rechercher" type="submit">Rechercher</button>
     </form>
 
@@ -45,12 +45,13 @@
         </form>
     </div>
 
-    <div class="bloc-jeux">
+    <div class="jeux-div">
         @foreach($products as $product)
             <div class="jeu-liste">
-                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="image-jeu">
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="jeu-image">
                 <h3>{{ $product->name }}</h3>
                 <p>{{ $product->state }} - {{ $product->price }} €</p>
+                <a class="bouton" href="{{ route('products.show', $product->id) }}">Voir les détails</a>
             </div>
         @endforeach
     </div>
