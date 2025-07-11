@@ -127,22 +127,6 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mb-3">
-                                                        <label for="description" class="form-label">Description</label>
-                                                        <textarea class="form-control @error('description') is-invalid @enderror"
-                                                                  id="description"
-                                                                  name="description"
-                                                                  rows="4"
-                                                                  placeholder="Description du produit (optionnel)">{{ old('description') }}</textarea>
-                                                        @error('description')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <div class="d-flex justify-content-between">
                                                 <a href="{{ route('products.index') }}" class="btn btn-secondary">
                                                     <i class="bi bi-x"></i> Annuler
@@ -157,6 +141,7 @@
                             </div>
                         </form>
 
+{{--
                         <script>
                             function previewImage(input) {
                                 const preview = document.getElementById('image-preview');
@@ -179,5 +164,6 @@
                                 }
                             }
                         </script>
+                        --}}
 
 @endsection

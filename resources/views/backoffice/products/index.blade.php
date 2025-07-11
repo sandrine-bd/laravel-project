@@ -14,8 +14,9 @@
     @endif
 
     <div class="card">
-        <div class="card-header">
+        <div class="card-header dashboard-liste">
             <h2 class="card-title mb-0">Liste des produits</h2>
+            <a href="{{ route('products.create') }}" class="btn btn-sm btn-primary">Créer un nouveau produit</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -35,7 +36,7 @@
                         <tr>
                             <td>{{ $product->id }}</td>
                             <td>
-                                <img src="{{ asset('assets/' . $product->image) }}"
+                                <img src="{{ asset($product->image) }}"
                                      alt="{{ $product->name }}"
                                      class="rounded"
                                      width="50" height="50"

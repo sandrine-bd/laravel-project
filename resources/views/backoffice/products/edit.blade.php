@@ -35,7 +35,7 @@
                     </div>
                     <div class="card-body text-center">
                         <div class="mb-3">
-                            <img src="{{ asset('assets/' . $product->image) }}"
+                            <img src="{{ asset($product->image) }}"
                                  alt="{{ $product->name }}"
                                  class="img-fluid rounded border"
                                  style="max-height: 200px; object-fit: cover;"
@@ -87,13 +87,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="state" class="form-label">Etat *</label>
-                                    <input type="text"
-                                           class="form-control @error('name') is-invalid @enderror"
-                                           id="state"
-                                           name="state"
-                                           value="{{ old('state', $product->state) }}"
-                                           required>
+                                    <label for="state" class="form-label">État *</label>
+                                    <select class="form-select @error('state') is-invalid @enderror"
+                                            id="state"
+                                            name="state"
+                                            required>
+                                        <option value="">Sélectionner un état</option>
+                                        <option value="Très bon" {{ old('state') == 'Très bon' ? 'selected' : '' }}>Très bon</option>
+                                        <option value="Bon" {{ old('state') == 'Bon' ? 'selected' : '' }}>Bon</option>
+                                        <option value="Correct" {{ old('state') == 'Correct' ? 'selected' : '' }}>Correct</option>
+                                    </select>
                                     @error('state')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror

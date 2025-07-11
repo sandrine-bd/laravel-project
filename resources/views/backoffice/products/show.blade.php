@@ -39,7 +39,7 @@
                     <h2 class="card-title">Image</h2>
                 </div>
                 <div class="card-body text-center">
-                    <img src="{{ asset('assets/' . $product->image) }}"
+                    <img src="{{ asset($product->image) }}"
                          alt="{{ $product->name }}"
                          class="img-fluid rounded border"
                          style="max-height: 300px; object-fit: cover;">
@@ -84,7 +84,7 @@
                         <div class="col-sm-3">
                             <strong>Date de création :</strong>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 text-muted">
                             {{ $product->created_at->format('d/m/Y à H:i') }}
                         </div>
                     </div>
@@ -93,8 +93,12 @@
                         <div class="col-sm-3">
                             <strong>Dernière modification :</strong>
                         </div>
-                        <div class="col-sm-9">
-                            {{ $product->updated_at->format('d/m/Y à H:i') }}
+                        <div class="col-sm-9 text-muted">
+                            @if($product->updated_at && $product->updated_at != $product->created_at)
+                                {{ $product->updated_at->format('d/m/Y à H:i') }}
+                            @else
+                                Jamais modifié
+                            @endif
                         </div>
                     </div>
                 </div>
