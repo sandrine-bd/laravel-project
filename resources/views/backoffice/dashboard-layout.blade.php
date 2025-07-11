@@ -15,7 +15,7 @@
 <body>
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">RePlay</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="{{ route('products.index') }}">RePlay</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,13 +27,14 @@
         </div>
     </header>
 
+    {{--
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3 sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('products') }}">Produits</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('products.index') }}">Produits</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('products.show', ['product' => $product->id]) }}">
@@ -48,14 +49,14 @@
                     </ul>
                 </div>
             </nav>
+            --}}
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
                 @yield('content')
             </main>
 
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>

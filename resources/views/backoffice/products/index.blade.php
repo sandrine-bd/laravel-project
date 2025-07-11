@@ -57,21 +57,13 @@
                                        title="Modifier">
                                         <i class="bi bi-pencil"></i>
                                     </a>
-
-    {{--
-                                        <form action="{{ route('backoffice.products.destroy', $product) }}"
-                                              method="POST"
-                                              class="d-inline"
-                                              onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit"
-                                                    class="btn btn-sm btn-outline-danger"
-                                                    title="Supprimer">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </form>
---}}
+                                    <form action="{{ route('products.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-outline-danger" title="Supprimer">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>

@@ -6,7 +6,7 @@
         <h1>Détails du produit {{ $product->id }}</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <a href="{{ route('products') }}" class="btn btn-sm btn-outline-secondary">
+                <a href="{{ route('products.index') }}" class="btn btn-sm btn-outline-secondary">
                     <i class="bi bi-arrow-left"></i> Retour à la liste
                 </a>
                 <a href="{{ route('products.edit', $product) }}" class="btn btn-sm btn-primary">
@@ -14,18 +14,13 @@
                 </a>
             </div>
 
-{{--
-            <form action="{{ route('products.destroy', $product) }}"
-                method="POST"
-                class="d-inline"
-                onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')">
+            <form action="{{ route('products.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-sm btn-danger">
-                <i class="bi bi-trash"></i> Supprimer
+                    <i class="bi bi-trash"></i> Supprimer
                 </button>
             </form>
---}}
 
         </div>
     </div>

@@ -91,7 +91,7 @@ class ProductController extends Controller
 
         $product->update($validated);
 
-        return redirect()->route('backoffice.products.show', $product)
+        return redirect()->route('products.show', $product)
             ->with('success', 'Produit modifié avec succès.');
     }
 

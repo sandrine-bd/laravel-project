@@ -87,14 +87,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="status" class="form-label">Etat *</label>
+                                    <label for="state" class="form-label">Etat *</label>
                                     <input type="text"
                                            class="form-control @error('name') is-invalid @enderror"
-                                           id="name"
-                                           name="name"
-                                           value="{{ old('name', $product->state) }}"
+                                           id="state"
+                                           name="state"
+                                           value="{{ old('state', $product->state) }}"
                                            required>
-                                    @error('name')
+                                    @error('state')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -121,7 +121,7 @@
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <a href="{{ route('backoffice.products.show', $product) }}" class="btn btn-secondary">
+                            <a href="{{ route('products.show', $product) }}" class="btn btn-secondary">
                                 <i class="bi bi-x"></i> Annuler
                             </a>
                             <button type="submit" class="btn btn-primary">
