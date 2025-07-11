@@ -17,7 +17,7 @@
         <h1>NOS MEILLEURES VENTES</h1>
     </div>
 
-    <div class="quatre-jeux">
+    <div class="jeux-div">
         <img src="{{asset("assets/cracklist.png")}}" alt="cracklist" class="jeu-image">
         <img src="{{asset("assets/skyjo.png")}}" alt="skyjo" class="jeu-image">
         <img src="{{asset("assets/code-names.png")}}" alt="code-names" class="jeu-image">
