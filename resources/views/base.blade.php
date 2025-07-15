@@ -21,6 +21,7 @@
         <div class="navbar-menu">
             <a href="/products" class="{{ request()->is('acheter') ? 'active' : '' }}">Acheter</a>
             <a href="/selling" class="{{ request()->is('vendre') ? 'active' : '' }}">Vendre</a>
+            <a href="{{ route('products.index') }}" class="btn btn-primary">Back Office</a>
         </div>
         <div class="navbar-panier-compte">
             <a href="/cart">

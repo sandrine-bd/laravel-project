@@ -42,6 +42,13 @@ body {
     font-weight: bold;
 }
 
+.navbar-backoffice {
+    background-color: #9C282A;
+    color: #fafafa;
+    font-size: 21px;
+    height: 60px;
+}
+
 a:hover {
     font-weight: bold;
 }
@@ -181,6 +188,7 @@ h3 {
 .filtres {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .filtre {

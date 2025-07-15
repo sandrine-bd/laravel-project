@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'show']);
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'show']);
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'show'])->name('home');
 
 Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index']);
 
@@ -32,3 +32,4 @@ Route::resource('/backoffice/products', \App\Http\Controllers\Backoffice\Product
 
 // Pour éviter des répétitions : Use App\Http\Controllers\Backoffice\ProductController;
 // Route::prefix('backoffice')->name('backoffice.')->group(function () { }
+
