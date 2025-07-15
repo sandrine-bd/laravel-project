@@ -18,20 +18,17 @@ Route::get('/account', [\App\Http\Controllers\AccountController::class, 'show'])
 
 Route::get('/backoffice', [\App\Http\Controllers\Backoffice\ProductController::class, 'index'])->name('backoffice');
 
-Route::get('/backoffice/products', [\App\Http\Controllers\Backoffice\ProductController::class, 'index'])->name('products.index');
-
-Route::post('/backoffice/products', [\App\Http\Controllers\Backoffice\ProductController::class, 'store'])->name('products.store');
-
-Route::get('/backoffice/products/{product}', [\App\Http\Controllers\Backoffice\ProductController::class, 'show'])->name('products.show');
-
-Route::get('/backoffice/products/create', [\App\Http\Controllers\Backoffice\ProductController::class, 'create'])->name('products.create');
-
-Route::get('/backoffice/products/{product}/edit', [\App\Http\Controllers\Backoffice\ProductController::class, 'edit'])->name('products.edit');
-
-Route::put('/backoffice/products/{product}', [\App\Http\Controllers\Backoffice\ProductController::class, 'update'])->name('products.update');
-
-Route::delete('/backoffice/products/{product}', [\App\Http\Controllers\Backoffice\ProductController::class, 'destroy'])->name('products.destroy');
+Route::resource('/backoffice/products', \App\Http\Controllers\Backoffice\ProductController::class, [
+    'names' => [
+        'index' => 'products.index',
+        'create' => 'products.create',
+        'store' => 'products.store',
+        'show' => 'products.show',
+        'edit' => 'products.edit',
+        'update' => 'products.update',
+        'destroy' => 'products.destroy',
+    ]
+]);
 
 // Pour éviter des répétitions : Use App\Http\Controllers\Backoffice\ProductController;
 // Route::prefix('backoffice')->name('backoffice.')->group(function () { }
-// Route::resource('products', ProductController::class);

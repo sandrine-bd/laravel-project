@@ -28,7 +28,7 @@
                 </div>
                 <div class="card-body text-center">
                     @if($product->image)
-                        <img src="{{ asset('assets/' . $product->image) }}"
+                        <img src="{{ asset($product->image) }}"
                              alt="{{ $product->name }}"
                              class="img-fluid rounded border"
                              style="max-height: 200px; object-fit: cover;">

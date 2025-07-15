@@ -40,13 +40,15 @@ class ProductController extends Controller
 
         // Gestion de l'upload d'image
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('products', 'public');
-            $validated['image'] = $imagePath;
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('assets/products'), $imageName);
+            $validated['image'] = 'assets/products/' . $imageName;
         }
 
         Product::create($validated);
 
-        return redirect()->route('backoffice.products.index')
+        return redirect()->route('products.index')
             ->with('success', 'Produit créé avec succès.');
     }
 
@@ -81,12 +83,14 @@ class ProductController extends Controller
         // Gestion de l'upload d'image
         if ($request->hasFile('image')) {
             // Supprimer l'ancienne image si elle existe
-            if ($product->image) {
-                Storage::disk('public')->delete($product->image);
+            if ($product->image && file_exists(public_path($product->image))) {
+                unlink(public_path($product->image));
             }
 
-            $imagePath = $request->file('image')->store('products', 'public');
-            $validated['image'] = $imagePath;
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('assets/products'), $imageName);
+            $validated['image'] = 'assets/products/' . $imageName;
         }
 
         $product->update($validated);
@@ -101,13 +105,13 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         // Supprime l'image si elle existe
-        if ($product->image) {
-            Storage::disk('public')->delete($product->image);
+        if ($product->image && file_exists(public_path($product->image))) {
+            unlink(public_path($product->image));
         }
 
         $product->delete();
 
-        return redirect()->route('backoffice.products.index')
+        return redirect()->route('products.index')
             ->with('success', 'Produit supprimé avec succès.');
     }
 }

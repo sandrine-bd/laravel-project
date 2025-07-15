@@ -96,9 +96,9 @@
                                                                 name="state"
                                                                 required>
                                                             <option value="">Sélectionner un état</option>
-                                                            <option value="Très bon état" {{ old('state') == 'Très bon état' ? 'selected' : '' }}>Très bon état</option>
-                                                            <option value="Bon état" {{ old('state') == 'Bon état' ? 'selected' : '' }}>Bon état</option>
-                                                            <option value="État correct" {{ old('state') == 'État correct' ? 'selected' : '' }}>État correct</option>
+                                                            <option value="Très bon" {{ old('state') == 'Très bon' ? 'selected' : '' }}>Très bon</option>
+                                                            <option value="Bon" {{ old('state') == 'Bon' ? 'selected' : '' }}>Bon</option>
+                                                            <option value="Correct" {{ old('state') == 'Correct' ? 'selected' : '' }}>Correct</option>
                                                         </select>
                                                         @error('state')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -141,7 +141,6 @@
                             </div>
                         </form>
 
-{{--
                         <script>
                             function previewImage(input) {
                                 const preview = document.getElementById('image-preview');
@@ -164,6 +163,5 @@
                                 }
                             }
                         </script>
-                        --}}
 
 @endsection
