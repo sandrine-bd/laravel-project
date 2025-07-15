@@ -8,7 +8,7 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'show']);
 
 Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index']);
 
-Route::get('/products/{id}', [\App\Http\Controllers\ProductController::class, 'showProduct'])->name('products.show');
+Route::get('/products/{id}', [\App\Http\Controllers\ProductController::class, 'showProduct'])->name('products.details');
 
 Route::get('/selling', [\App\Http\Controllers\SellingController::class, 'show']);
 

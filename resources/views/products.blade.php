@@ -51,7 +51,7 @@
                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="jeu-image">
                 <h3>{{ $product->name }}</h3>
                 <p>{{ $product->state }} - {{ $product->price }} €</p>
-                <a class="bouton bouton-style" href="{{ route('products.show', $product->id) }}">Voir les détails</a>
+                <a class="bouton bouton-style" href="{{ route('products.details', $product->id) }}">Voir les détails</a>
             </div>
         @endforeach
     </div>
