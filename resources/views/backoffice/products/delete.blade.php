@@ -68,7 +68,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <strong>État :</strong>
-                            <p class="text-muted">{{ $product->state }}</p>
+                            <p class="text-muted">{{ $product->category->name }}</p>
                         </div>
                         <div class="col-md-6">
                             <strong>ID :</strong>

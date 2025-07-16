@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+Use App\Models\Category;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
-        return view('products', compact('products'));
+        return view('products', [
+            'products' => Product::with('category')->paginate(20)
+        ]);
     }
 
     public function showProduct($id)

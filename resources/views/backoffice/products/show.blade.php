@@ -67,7 +67,7 @@
                             <strong>Etat :</strong>
                         </div>
                         <div class="col-sm-9">
-                            {{ $product->state }}
+                            {{ $product->category->name }}
                         </div>
                     </div>
 

@@ -43,7 +43,7 @@
                                      style="object-fit: cover;">
                             </td>
                             <td><strong>{{ $product->name }}</strong></td>
-                            <td>{{ $product->state }}</td>
+                            <td>{{ $product->category->name }}</td>
                             <td>{{ number_format($product->price, 2) }} €</td>
                             <td>{{ $product->created_at->format('d/m/Y') }}</td>
                             <td>

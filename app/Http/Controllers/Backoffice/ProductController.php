@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backoffice;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -14,8 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('backoffice.products.index', compact('products'));
+        return view('backoffice.products.index', [
+            'products' => Product::all()
+        ]);
     }
 
     /**
@@ -23,7 +25,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('backoffice.products.create');
+        $categories = Category::all();
+        return view('backoffice.products.create', compact('categories'));
     }
 
     /**
@@ -34,7 +37,7 @@ class ProductController extends Controller
         $validated = $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
-            'state' => 'required|string|max:255',
+            'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric|min:0',
         ]);
 
@@ -57,7 +60,10 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('backoffice.products.show', compact('product'));
+        return view('backoffice.products.show', [
+            'product' => $product,
+            'categories' => Category::select('id', 'name')->get()
+        ]);
     }
 
     /**
@@ -65,7 +71,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('backoffice.products.edit', compact('product'));
+        return view('backoffice.products.edit', [
+            'product' => $product,
+            'categories' => Category::select('id', 'name')->get()
+        ]);
     }
 
     /**
@@ -76,7 +85,7 @@ class ProductController extends Controller
         $validated = $request->validate([
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
-            'state' => 'required|string|max:255',
+            'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric|min:0',
         ]);
 

@@ -90,17 +90,16 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label for="state" class="form-label">État *</label>
-                                                        <select class="form-select @error('state') is-invalid @enderror"
-                                                                id="state"
-                                                                name="state"
-                                                                required>
+                                                        <label for="category" class="form-label">État *</label>
+                                                        <select class="form-select" id="category" name="category_id" required>
                                                             <option value="">Sélectionner un état</option>
-                                                            <option value="Très bon" {{ old('state') == 'Très bon' ? 'selected' : '' }}>Très bon</option>
-                                                            <option value="Bon" {{ old('state') == 'Bon' ? 'selected' : '' }}>Bon</option>
-                                                            <option value="Correct" {{ old('state') == 'Correct' ? 'selected' : '' }}>Correct</option>
+                                                            @foreach($categories as $category)
+                                                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                                                    {{ $category->name }}
+                                                                </option>
+                                                            @endforeach
                                                         </select>
-                                                        @error('state')
+                                                        @error('category_id')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                         @enderror
                                                     </div>

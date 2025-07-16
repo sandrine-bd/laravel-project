@@ -12,11 +12,15 @@ class Product extends Model
     protected $fillable = [
         'image',
         'name',
-        'state',
+        'category_id',
         'price',
     ];
 
     protected $casts = [
         'price' => 'decimal:2',
     ];
+
+    public function category() {
+        return $this->belongsTo(Category::class);
+    }
 }
