@@ -2,19 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\Product;
-Use App\Models\Category;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('products', [
-            'products' => Product::with('category')->paginate(20)
-        ]);
+        $categories = Category::all();
+        $query = Product::with('category'); // Eager loading pour éviter N+1
+
+        // Filtre par recherche de nom
+        if ($request->filled('search')) {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        // Filtre par catégories multiples
+        if ($request->filled('category_ids')) {
+            $query->whereIn('category_id', $request->category_ids);
+        }
+        $products = $query->get();
+
+        return view('products', compact('products', 'categories'));
     }
 
     public function showProduct($id)

@@ -13,7 +13,12 @@
         <div>
             <p class="deroulement"> Etat : {{ $product->category->name }} </p>
             <p class="deroulement"> Prix : {{ $product->price }} € </p>
-            <button type="submit" class="bouton bouton-style">Ajouter au panier</button>
+            @auth
+                <form method="POST" action="{{ route('cart.add', $product->id) }}">
+                    @csrf
+                    <button type="submit" class="bouton bouton-style">Ajouter au panier</button>
+                </form>
+            @endauth
         </div>
     </div>
 

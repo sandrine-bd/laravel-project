@@ -15,11 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('backoffice.products.index', [
-            'products' => Product::all()
-        ]);
+        $products = Product::all();
+        return view('backoffice.products.index', compact('products'));
     }
-
     /**
      * Show the form for creating a new resource.
      */

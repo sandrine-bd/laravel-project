@@ -258,3 +258,16 @@ h2 {
     justify-content: space-between;
     align-items: center;
 }
+
+.filtres {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.aucun-resultat {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
