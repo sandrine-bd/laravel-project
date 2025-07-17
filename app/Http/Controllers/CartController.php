@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function show(): string {
-        return view('cart');
-    }
-
     public function index() {
         $cartItems = Cart::with('product')->where('user_id', Auth::id())->get();
         return view('cart.index', compact('cartItems'));

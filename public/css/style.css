@@ -118,6 +118,11 @@ h3 {
     margin: 20px;
 }
 
+.bouton:hover {
+    font-weight: bold;
+}
+
+
 .accueil-image {
     width: 300px;
     margin: 20px;
@@ -270,4 +275,8 @@ h2 {
     text-align: center;
     padding: 40px;
     color: #666;
+}
+
+.paragraphe {
+    margin: 40px;
 }

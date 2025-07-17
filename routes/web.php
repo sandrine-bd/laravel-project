@@ -14,13 +14,15 @@ Route::get('/products/{id}', [\App\Http\Controllers\ProductController::class, 's
 Route::get('/selling', [\App\Http\Controllers\SellingController::class, 'show']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/panier', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
-    Route::post('/panier/ajouter/{id}', [\App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
-    Route::delete('/panier/supprimer/{id}', [\App\Http\Controllers\CartController::class, 'remove'])->name('cart.remove');
-    Route::delete('/panier/vider', [\App\Http\Controllers\CartController::class, 'clear'])->name('cart.clear');
+    Route::get('/cart', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{id}', [\App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
+    Route::delete('/cart/remove/{id}', [\App\Http\Controllers\CartController::class, 'remove'])->name('cart.remove');
+    Route::delete('/cart/clear', [\App\Http\Controllers\CartController::class, 'clear'])->name('cart.clear');
 });
 
-Route::get('/account', [\App\Http\Controllers\AccountController::class, 'show']);
+Route::middleware('auth')->get('/account', function () {
+    return view('account', ['user' => Auth::user()]);
+})->name('account');
 
 Route::get('/backoffice', [\App\Http\Controllers\Backoffice\ProductController::class, 'index'])->name('backoffice');
 

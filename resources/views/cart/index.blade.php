@@ -3,16 +3,18 @@
 @section('title', 'Mon Panier')
 
 @section('content')
-    <h1>Mon panier</h1>
+    <div class="titre">
+        <h1>MON PANIER</h1>
+    </div>
 
     @if(session('success'))
-        <p style="color:green;">{{ session('success') }}</p>
+        <p class="paragraphe" style="color:green;">{{ session('success') }}</p>
     @endif
 
     @if($cartItems->isEmpty())
-        <p>Votre panier est vide.</p>
+        <p class="paragraphe">Votre panier est vide.</p>
     @else
-        <table>
+        <table class="paragraphe">
             <thead>
             <tr>
                 <th>Produit</th>
@@ -46,12 +48,12 @@
             </tbody>
         </table>
 
-        <h3>Total : {{ $total }} €</h3>
+        <h3 class="paragraphe">Total : {{ $total }} €</h3>
 
         <form action="{{ route('cart.clear') }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit">Vider le panier</button>
+            <button class="bouton-style bouton" type="submit">Vider le panier</button>
         </form>
     @endif
 @endsection

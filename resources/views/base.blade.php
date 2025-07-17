@@ -27,9 +27,11 @@
             <a href="/cart">
                 <img src="{{asset("assets/panier.svg")}}" alt="panier" class="navbar-picto" >
             </a>
+            @auth
             <a href="/account">
                 <img src="{{asset("assets/compte.svg")}}" alt="mon-compte" class="navbar-picto">
             </a>
+            @endauth
         </div>
     </div>
 
