@@ -42,6 +42,12 @@ body {
     font-weight: bold;
 }
 
+.navbar-panier-compte {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .navbar-backoffice {
     background-color: #9C282A;
     color: #fafafa;
@@ -188,6 +194,10 @@ h3 {
     border-radius: 40px;
     font-size: 21px;
     text-decoration: none;
+}
+
+.bouton-style:hover {
+    font-weight: bold;
 }
 
 .filtres {

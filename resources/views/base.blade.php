@@ -19,18 +19,25 @@
             </a>
         </div>
         <div class="navbar-menu">
-            <a href="/products" class="{{ request()->is('acheter') ? 'active' : '' }}">Acheter</a>
-            <a href="/selling" class="{{ request()->is('vendre') ? 'active' : '' }}">Vendre</a>
+            <a href="/products" class="{{ request()->is('acheter') ? 'active' : '' }}">Jeux</a>
             <a href="{{ route('products.index') }}" class="btn btn-primary">Back Office</a>
         </div>
         <div class="navbar-panier-compte">
             <a href="/cart">
                 <img src="{{asset("assets/panier.svg")}}" alt="panier" class="navbar-picto" >
             </a>
+            @guest
+                <a href="{{ route('login') }}" class="bouton-style">Se connecter</a>
+                <a href="{{ route('register') }}" class="bouton-style">Créer un compte</a>
+            @endguest
             @auth
             <a href="/account">
                 <img src="{{asset("assets/compte.svg")}}" alt="mon-compte" class="navbar-picto">
             </a>
+            <form method="POST" action="{{ route('logout') }}" style="display:flex;">
+                @csrf
+                <button type="submit" class="bouton-style" >Se déconnecter</button>
+            </form>
             @endauth
         </div>
     </div>
