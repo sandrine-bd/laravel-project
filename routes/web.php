@@ -24,19 +24,20 @@ Route::middleware('auth')->get('/account', function () {
     return view('account', ['user' => Auth::user()]);
 })->name('account');
 
-Route::get('/backoffice', [\App\Http\Controllers\Backoffice\ProductController::class, 'index'])->name('backoffice');
-
-Route::resource('/backoffice/products', \App\Http\Controllers\Backoffice\ProductController::class, [
-    'names' => [
-        'index' => 'products.index',
-        'create' => 'products.create',
-        'store' => 'products.store',
-        'show' => 'products.show',
-        'edit' => 'products.edit',
-        'update' => 'products.update',
-        'destroy' => 'products.destroy',
-    ]
-]);
+Route::middleware('auth')->group(function () {
+    Route::get('/backoffice', [\App\Http\Controllers\Backoffice\ProductController::class, 'index'])->name('backoffice');
+    Route::resource('/backoffice/products', \App\Http\Controllers\Backoffice\ProductController::class, [
+        'names' => [
+            'index' => 'products.index',
+            'create' => 'products.create',
+            'store' => 'products.store',
+            'show' => 'products.show',
+            'edit' => 'products.edit',
+            'update' => 'products.update',
+            'destroy' => 'products.destroy',
+        ]
+    ]);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
